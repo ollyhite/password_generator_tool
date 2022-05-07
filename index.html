@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <select onchange="getSelectData()" name="numSelect" id="numSelect">
+          </select>
+          <label for="numSelect">Charaters for Passwords</label>
+          <br>
+          <!-- <input class="messageCheckbox" type="checkbox" id="lowerCase" name="checkboxs" value="lowerCaseChecked"
+            onchange="checkLowercaseInput()">
+          <label for="lowerCase"> Need Lower Case Charaters</label><br> -->
+          <input class="messageCheckbox" type="checkbox" id="upperCase" name="checkboxs" value="upperCaseChecked" onchange="checkUppercaseInput()">
+          <label for="upperCase"> Need Upeer Case Charaters</label><br>
+          <input class="messageCheckbox" type="checkbox" id="needNnumber" name="checkboxs" value="numberChecked" onchange="checkNumberInput()">
+          <label for="needNnumber"> Need Numbers</label><br>
+          <input class="messageCheckbox" type="checkbox" id="needSymbols" name="checkboxs" value="symbolChecked" onchange="checkSymbolInput()">
+          <label for="needSymbols"> Need Symbols</label>
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          
+          <button id="generate" class="btn" onclick="writePassword()">Generate Password</button>
+          <button id="copy" class="btn" onclick="copyPassword()">Copy It</button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
